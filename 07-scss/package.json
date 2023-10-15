@@ -1,0 +1,15 @@
+{
+  "name": "07-scss",
+  "version": "1.0.0",
+  "description": "Sass (Syntactically Awesome Stylesheets) and CSS (Cascading Style Sheets) are both used for styling web pages, but there are significant differences between the two:",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch src/styles/main.scss dist/styles/main.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.69.3"
+  }
+}

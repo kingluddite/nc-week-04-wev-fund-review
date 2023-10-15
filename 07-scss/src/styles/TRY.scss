@@ -1,0 +1,32 @@
+@import "variables"; // Import the partial
+
+// Define a mixin
+@mixin button-style($color) {
+  background-color: $color;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  &:hover {
+    background-color: darken($color, 10%); // Use the `darken` function
+  }
+}
+
+// Use a @for loop to generate button styles for different colors
+@for $i from 1 through 3 {
+  .button-#{$i} {
+    @include button-style(
+      lighten($primary-color, 10% * $i)
+    ); // Use `lighten` function and the mixin
+  }
+}
+
+// Use the variables defined in the partial
+body {
+  background-color: $secondary-color;
+}
+
+.button {
+  @include button-style($primary-color);
+}
